@@ -1,0 +1,75 @@
+/* Restrained research palette: cool neutrals, muted lavender, and readable status colors. */
+:root {
+  color-scheme: light;
+  color: #303746;
+  --purple: #75689f;
+  --muted: #707989;
+  --line: rgba(76, 88, 110, .14);
+  --card: rgba(255, 255, 255, .84);
+  --shadow: 0 10px 28px rgba(56, 68, 91, .07);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 16% 7%, rgba(226, 221, 242, .86), transparent 48%),
+    radial-gradient(ellipse at 88% 86%, rgba(222, 231, 241, .78), transparent 48%),
+    linear-gradient(145deg, #e4e8ed, #d4dbe3);
+}
+
+.sidebar {
+  background: linear-gradient(155deg, rgba(242, 239, 249, .94), rgba(228, 231, 241, .91));
+  color: #41495c;
+}
+.brand-mark { color: #75689f; background: #f7f5fb; }
+.brand-sub, .nav-label { color: #777f91; }
+.nav button { color: #606a7d; font-size: 15px; font-weight: 500; line-height: 1.4; }
+.nav-label { font-size: 11px; font-weight: 600; }
+.nav .count { font-size: 11px; }
+.sidebar > .nav { min-height: 20px; }
+.sidebar .nav button { touch-action: pan-x; }
+.navigation-dragging { visibility: hidden; }
+.navigation-drag-preview { position: fixed; inset: 0 auto auto 0; z-index: 100; pointer-events: none; filter: drop-shadow(0 8px 16px #44375535); }
+.navigation-drag-preview button { background: #e4dcef; }
+.navigation-sorting, .navigation-sorting * { cursor: grabbing !important; user-select: none !important; }
+.component-sortable { cursor: grab; }
+.component-sortable button, .component-sortable a { cursor: pointer; }
+.component-dragging { visibility: hidden; }
+.component-drag-preview { position: fixed !important; inset: 0 auto auto 0 !important; z-index: 100; margin: 0 !important; pointer-events: none; opacity: .97; filter: drop-shadow(0 12px 24px #44375530); }
+.component-sorting, .component-sorting * { cursor: grabbing !important; user-select: none !important; }
+.nav button:hover { color: #554978; background: rgba(255, 255, 255, .58); }
+.nav button.active { color: #554978; background: rgba(216, 208, 234, .68); }
+.nav button.active svg { color: #75689f; background: #f7f5fb; }
+.team-card { background: rgba(255, 255, 255, .5); border-color: rgba(255, 255, 255, .78); }
+
+.main { background: linear-gradient(145deg, rgba(249, 250, 252, .94), rgba(240, 243, 248, .91)); }
+.topbar { background: rgba(248, 249, 252, .8); border-bottom-color: rgba(81, 94, 116, .09); }
+.card { background: var(--card); border-color: rgba(255, 255, 255, .9); }
+.search input, .filter-select, .icon-button { background: rgba(255, 255, 255, .8); border-color: rgba(255, 255, 255, .95); }
+.btn { background: rgba(255, 255, 255, .82); border-color: rgba(255, 255, 255, .96); color: #485164; }
+.btn.primary { background: #76689f; color: white; box-shadow: 0 5px 16px rgba(118, 104, 159, .2); }
+.btn.primary:hover { background: #685b91; box-shadow: 0 7px 20px rgba(118, 104, 159, .25); }
+.subtle-link { color: #706294; }
+
+.stat-icon, .file-icon, .activity-icon { background: #eeedf5; color: #74689d; }
+.stats .stat:last-child { background: linear-gradient(135deg, rgba(232, 228, 243, .92), rgba(229, 235, 244, .9)); color: #45445b; }
+.task-date { background: #eeedf5; color: #6f6593; }
+.research-progress { background: linear-gradient(130deg, rgba(235, 233, 242, .72), rgba(231, 235, 243, .8)); }
+.progress-action { background: #7d70a7; border-color: #e6e1f0; }
+.chart-area { background: repeating-linear-gradient(to bottom, transparent 0, transparent 47px, rgba(103, 116, 138, .08) 48px); }
+.bar { background: linear-gradient(180deg, #9b91bc, #73699a); }
+.bar.secondary { background: #c9c8d8; }
+.legend-dot { background: #76689f; }
+.legend-dot.pale { background: #c9c8d8; }
+
+.tag { background: #eeedf5; color: #665b88; }
+.tag.green { background: #e8f1eb; color: #4c785e; }
+.tag.orange { background: #f5efe3; color: #946f35; }
+.tag.red { background: #f5e9ea; color: #a0525d; }
+.tag.gray { background: #edf0f3; color: #687282; }
+.notice { background: #edf0f6; color: #56647d; }
+.mini-btn { background: #efedf5; color: #665b88; }
+.settings-grid .setting-row { border-color: var(--line); }
+
+@media (prefers-reduced-transparency: reduce) {
+  .sidebar, .main, .topbar, .card { backdrop-filter: none; -webkit-backdrop-filter: none; }
+}

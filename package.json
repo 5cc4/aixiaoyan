@@ -1,0 +1,18 @@
+{
+  "name": "qiyan-lab-web",
+  "private": true,
+  "version": "1.7.37",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs"
+  },
+  "dependencies": {
+    "imapflow": "^2.2.5",
+    "mailparser": "^3.9.36",
+    "pdf-parse": "2.4.5",
+    "mammoth": "1.11.0"
+  }
+}

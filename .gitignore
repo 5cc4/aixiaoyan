@@ -1,0 +1,39 @@
+# Runtime dependencies and data
+node_modules/
+data/
+runtime-data/
+uploads/
+attachments/
+photos/
+backups/
+logs/
+coverage/
+.test-data-*/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+integration.json
+credentials.json
+secrets.json
+review-login.json
+setup-token.txt
+encryption.key
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Databases, logs, archives and OS files
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
